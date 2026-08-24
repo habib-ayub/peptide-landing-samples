@@ -3,152 +3,153 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Last Dose — never miss pin night because the bottle died</title>
-<meta name="description" content="For vial injectors: get warned before Thursday’s shot that this $200 bottle will be empty."/>
+<title>Watch: never miss pin night because the bottle died</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#070707;color:#fafaf9;font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.5}
-.hero{min-height:100svh;background:#070707 url("hero.png") right center/cover no-repeat;position:relative;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070707 0 46%,rgba(7,7,7,.2) 100%)}
-nav{position:absolute;z-index:2;top:0;left:0;right:0;max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;letter-spacing:-.04em}
-.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:96px 24px 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;width:100%}
-.kicker{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ff6a1a;margin-bottom:12px}
-h1{font-family:"Instrument Serif",serif;font-size:clamp(40px,5.6vw,68px);line-height:.96;font-weight:400;margin:0 0 14px}
-.sub{font-size:18px;color:#d6d3d1;max-width:34em;margin-bottom:22px}
-form{display:flex;gap:8px;flex-wrap:wrap}
-input{flex:1;min-width:200px;background:#111;border:1px solid #3f3f46;color:#fff;padding:16px 16px;border-radius:999px;font:inherit}
-button,.btn{background:#ff6a1a;color:#111;border:0;font-weight:800;padding:16px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
-.proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:#a8a29e}
-.proof b{color:#fff}
-.phone{width:min(100%,320px);margin:0 auto;filter:drop-shadow(0 28px 50px #000)}
-.badge{margin-top:12px;display:inline-block;background:#1a120c;border:1px solid #7c2d12;color:#fdba74;font-size:13px;font-weight:700;padding:8px 12px;border-radius:8px}
-.sec{max-width:800px;margin:0 auto;padding:64px 24px}
-h2{font-family:"Instrument Serif",serif;font-size:36px;font-weight:400;margin:0 0 16px}
-p,li{color:#d6d3d1;font-size:17px}
-ul{padding-left:1.15em;margin:12px 0}
-li{margin:8px 0}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.box{background:#121212;border:1px solid #262626;border-radius:16px;padding:20px}
-.box h3{margin-bottom:8px}
-.stack{background:#121212;border:1px solid #262626;border-radius:16px;overflow:hidden;margin:20px 0}
-.row{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid #262626}
-.row:last-child{border-bottom:0;background:#1a120c;font-weight:800}
-.total{display:flex;gap:18px;align-items:baseline;margin:18px 0}
-.total b{font-size:48px}
-.total s{color:#a8a29e;font-size:22px}
-.g{background:#1a120c;border:1px solid #ff6a1a;border-radius:16px;padding:22px;margin:22px 0}
-.g h3{color:#ff6a1a;margin-bottom:8px}
-.cta-block{text-align:center;padding:12px 0 8px}
-.tiny{font-size:13px;color:#a8a29e;margin-top:8px}
-footer{max-width:800px;margin:0 auto;padding:20px 24px 72px;color:#57534e;font-size:12px}
-@media(max-width:860px){.wrap,.split{grid-template-columns:1fr}.hero{min-height:auto}.hero:before{background:#070707f0}}
+.page{background:#0b0b0b;color:#f5f5f4;font-family:"Plus Jakarta Sans",system-ui,sans-serif}
+.topbar{background:#111;color:#fbbf24;text-align:center;font-size:13px;font-weight:700;padding:10px 16px;letter-spacing:.02em}
+.funnel{max-width:920px;margin:0 auto;padding:28px 16px 80px;text-align:center}
+h1{font-family:"Instrument Serif",serif;font-size:clamp(28px,4.4vw,46px);line-height:1.12;font-weight:400;margin:12px 0 22px}
+.vsl{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.vsl img.slide,.vsl .solid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vsl .solid{background:#111}
+.vsl .cap{position:absolute;left:0;right:0;bottom:0;padding:28px 24px 36px;background:linear-gradient(transparent,#000e);text-align:left;font-size:clamp(18px,2.6vw,28px);font-weight:700;line-height:1.25}
+.vsl .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;border:0}
+.vsl .play i{width:86px;height:86px;border-radius:50%;background:#ef4444;display:grid;place-items:center;box-shadow:0 10px 30px #ef444488}
+.vsl .play i:after{content:"";border:16px solid transparent;border-left:26px solid #fff;margin-left:6px;display:block}
+.bar{position:absolute;left:0;right:0;bottom:0;height:5px;background:#ffffff22}
+.bar>span{display:block;height:100%;width:0;background:#ef4444}
+.cta-wrap{display:none;margin:22px 0 8px}
+.cta-wrap.on{display:block}
+.cta{display:inline-block;background:#ef4444;color:#fff;font-weight:800;font-size:18px;padding:18px 28px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.04)}}
+.arrow{font-size:28px;margin-bottom:8px}
+.sub{color:#a8a29e;font-size:14px;margin-top:8px}
+.below{max-width:720px;margin:48px auto 0;text-align:left}
+h2{font-family:"Instrument Serif",serif;font-size:30px;font-weight:400;margin:36px 0 12px}
+p,li{color:#d6d3d1;font-size:16px;line-height:1.6}
+ul{padding-left:1.2em}
+.stack{background:#141414;border:1px solid #262626;border-radius:12px;overflow:hidden;margin:16px 0}
+.row{display:flex;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1px solid #262626}
+.row:last-child{border:0;background:#1c1010;font-weight:800}
+.g{border:2px solid #fbbf24;background:#1c1508;border-radius:12px;padding:18px;margin:18px 0}
+.g b{color:#fbbf24}
+form{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+input{min-width:220px;flex:1;padding:16px;border-radius:8px;border:1px solid #3f3f46;background:#111;color:#fff;font:inherit}
+button.yes{background:#ef4444;color:#fff;font-weight:800;border:0;padding:16px 22px;border-radius:8px;cursor:pointer}
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:#111;padding:10px 16px;border-top:1px solid #262626;z-index:20}
+.sticky.on{display:block}
+.sticky a{display:block;background:#ef4444;color:#fff;text-align:center;font-weight:800;padding:14px;border-radius:8px;text-decoration:none}
+footer{text-align:center;color:#57534e;font-size:12px;margin-top:48px}
 </style>
 </head>
-<body>
-<nav><div class="logo">Last Dose</div><a class="btn" href="#get">Get the scream</a></nav>
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <p class="kicker">Vial injectors only. Pens, leave.</p>
-      <h1>Never miss pin night because the bottle died.</h1>
-      <p class="sub">Get warned before Thursday’s shot that this $200 vial will be empty. Reorder while you still have a dose. Not after you stall a week.</p>
-      <form class="waitlist" id="get">
-        <input type="email" required placeholder="Email" autocomplete="email"/>
-        <button type="submit">Warn me before it dies</button>
-      </form>
-      <div class="proof"><span><b>30-day</b> miss-a-scream = free month</span><span><b>$10</b> vs one $200 bottle</span><span>Not medical advice</span></div>
-      <div class="badge">If we don’t scream before you’re empty, you don’t pay that month.</div>
-    </div>
-    <img class="phone" src="phone.png" alt="App: this vial dies in 2 days"/>
+<body class="page">
+<div class="topbar">Founder price $10/mo — waitlist closes <span id="cd">soon</span></div>
+<div class="funnel">
+  <p style="color:#fbbf24;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase">2-minute video · vial injectors only</p>
+  <h1>Watch this before you lose another $200 vial.</h1>
+  <div class="vsl" id="vsl">
+    <img class="slide" src="hero.png" alt=""/>
+    <div class="cap">Click play. 2 minutes.</div>
+    <button class="play" type="button" aria-label="Play video"><i></i></button>
+    <div class="bar"><span></span></div>
   </div>
-</section>
-
-<section class="sec">
-  <h2>This is for you if…</h2>
-  <div class="split">
-    <div class="box">
-      <h3>Yes</h3>
-      <ul>
-        <li>You draw from a vial, not a pen.</li>
-        <li>You have paid $150–$350 this month for the drug plus another $200 for a bottle.</li>
-        <li>You have opened the fridge on pin night and felt your stomach drop.</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>No</h3>
-      <ul>
-        <li>You click a Wegovy / Zepbound pen. You don’t have this problem.</li>
-        <li>You want Shotsy’s “why does Wednesday feel like this” chart. Different job.</li>
-        <li>You want a doctor in an app. We will not tell you what to inject.</li>
-      </ul>
-    </div>
+  <div class="cta-wrap">
+    <div class="arrow">▼</div>
+    <a class="cta" href="#get">YES — I want in</a>
+    <p class="sub">Watch until the offer. The button shows when the pitch starts.</p>
   </div>
-</section>
+</div>
+<div class="below">
 
-<section class="sec">
-  <h2>What happens if you do nothing</h2>
-  <p>You already know. You paid for the bottle. You meant to track remaining units. Pin night comes. The fridge is empty. Next delivery is four days out. You miss a week. The scale stalls. You swear you’ll use the spreadsheet next time. You don’t.</p>
-  <p style="margin-top:12px">A sane person would pay $10 to never feel that again. That’s the whole product.</p>
-</section>
+<h2>Who this is for</h2>
+<p>You draw from a vial, not a pen. You’ve paid $150–$350 this month for the drug and another $200 for a bottle. You’ve opened the fridge on pin night and felt your stomach drop.</p>
+<p>If you click a Wegovy pen, leave. You don’t have this problem. If you want Shotsy’s leftover-shot chart, that’s the other page.</p>
+<h2>What you get</h2>
 
-<section class="sec">
-  <h2>The mechanism (why this isn’t “just a log”)</h2>
-  <p>Free logs remember the last pin. They do not scream that <i>this vial</i> will be dead before Thursday. We count remaining doses. We never overwrite the last bottle. Mix math stays free so the count is true. Then we scream.</p>
-</section>
+<section id="get">
+  <h2>Get on the list</h2>
+  
+<div class="stack">
+  <div class="row"><span>The scream: this bottle dies before Thursday’s pin</span><span>$200</span></div>
+  <div class="row"><span>Vial history that never overwrites</span><span>$49</span></div>
+  <div class="row"><span>Free mix math so the count is true</span><span>$29</span></div>
+  <div class="row"><span>Pin log (door, not the product)</span><span>$0</span></div>
+  <div class="row"><span>Total value</span><span>$278</span></div>
+</div>
+<p>Your price: <b>$10/month</b>.</p>
 
-<section class="sec">
-  <h2>What you get (the stack)</h2>
-  <div class="stack">
-    <div class="row"><span>Core: the scream. “This bottle dies before Thursday’s pin.”</span><span>$200</span></div>
-    <div class="row"><span>Bonus: vial history that never overwrites the last bottle</span><span>$49</span></div>
-    <div class="row"><span>Bonus: free mix math so the remaining-dose count is honest</span><span>$29</span></div>
-    <div class="row"><span>Bonus: pin log (the door). Not why you pay.</span><span>$0</span></div>
-    <div class="row"><span>Total value</span><span>$278</span></div>
-  </div>
-  <div class="total"><b>$10</b><s>$278</s><span>/ month vs one dead bottle</span></div>
-  <p>One saved vial pays for 20 months. If the scream never fires, cancel.</p>
+  <div class="g"><b>Guarantee:</b> If we miss a runout in the first 30 days, you don’t pay that month. Cancel anytime. Not medical advice.</div>
+  <form class="waitlist">
+    <input type="email" required placeholder="Email"/>
+    <button class="yes" type="submit">YES — I want in</button>
+  </form>
+  <p class="sub" style="text-align:center">$10/month when it ships. You’re early. That’s the deal.</p>
 </section>
-
-<section class="sec">
-  <div class="g">
-    <h3>Guarantee</h3>
-    <p>Use it for 30 days. If we fail to warn you before a vial runs out, you don’t pay that month. Keep the log. Worst case: you wasted a minute and still have a spreadsheet.</p>
-  </div>
-  <div class="cta-block">
-    <form class="waitlist" style="justify-content:center">
-      <input type="email" required placeholder="Email"/>
-      <button type="submit">Warn me before it dies</button>
-    </form>
-    <p class="tiny">Founder waitlist. $10/month when it ships. Cancel anytime. Not medical advice.</p>
-  </div>
-</section>
-
-<section class="sec">
-  <h2>Proof this panic is real (not fake reviews of us)</h2>
-  <p>GLP-1 Forum people already track remaining volume and landed cost in spreadsheets because apps overwrite the vial and forget the last order. Pep AI’s own site sells “every vial counts itself down, so you reorder before you run out.” Peptide Tracker does it free. The job exists. The paid layer is the scream, not the log.</p>
-</section>
-
-<section class="sec">
-  <h2>FAQ</h2>
-  <p><b>Isn’t this just Peptide Tracker?</b><br/>No. They log. We interrupt you before pin night is empty.</p>
-  <p style="margin-top:14px"><b>Do you ship today?</b><br/>No. This page is the offer. Email gets you in first. The app is next.</p>
-  <p style="margin-top:14px"><b>Medical advice?</b><br/>No. You already bought the compound. We don’t dose you. We don’t let the fridge go empty.</p>
-</section>
-<footer>Last Dose. A/B test. Not a live product yet. Not medical advice.</footer>
-
+</div>
+<div class="sticky"><a href="#get">YES — I want in</a></div>
+<footer>A/B test funnel. Not a live app yet. Not medical advice.</footer>
 <script>
-document.querySelectorAll("form.waitlist").forEach(function(f){
-  f.addEventListener("submit", function(e){
-    e.preventDefault();
-    var b=f.querySelector("button");
-    b.textContent="You're in";
-    b.disabled=true;
-    var i=f.querySelector("input");
-    if(i) i.disabled=true;
+
+function mountVSL(root, slides, revealAt){
+  var i=0, t=0, playing=false, timer=null;
+  var total = slides.reduce(function(s,x){return s+x.d;},0);
+  var playBtn = root.querySelector('.play');
+  var cap = root.querySelector('.cap');
+  var bar = root.querySelector('.bar>span');
+  var img = root.querySelector('img.slide');
+  var cta = document.querySelector('.cta-wrap');
+  var sticky = document.querySelector('.sticky');
+  function show(n){
+    var s=slides[n];
+    cap.textContent=s.t;
+    if(s.img){ img.src=s.img; img.style.display='block'; }
+    else { img.style.display='none'; }
+  }
+  function tick(){
+    t+=200;
+    var acc=0, idx=0;
+    for(var k=0;k<slides.length;k++){ acc+=slides[k].d; if(t<acc){idx=k;break;} idx=k; }
+    if(idx!==i){ i=idx; show(i); }
+    bar.style.width=Math.min(100, t/total*100)+'%';
+    if(t>=revealAt && cta){ cta.classList.add('on'); if(sticky) sticky.classList.add('on'); }
+    if(t>=total){ playing=false; clearInterval(timer); if(cta) cta.classList.add('on'); }
+  }
+  playBtn.addEventListener('click', function(){
+    if(playing) return;
+    playing=true;
+    playBtn.style.display='none';
+    show(0);
+    timer=setInterval(tick,200);
   });
+}
+
+
+mountVSL(document.getElementById('vsl'), [
+  {t:"Pin night. You open the fridge.", img:"hero.png", d:5000},
+  {t:"Nothing. The $200 bottle is gone.", img:"hero.png", d:5000},
+  {t:"Next delivery is four days out. You stall a week.", img:"hero.png", d:5500},
+  {t:"You swore you’d track it. You didn’t open the spreadsheet.", img:"phone.png", d:5500},
+  {t:"Free logs remember the last pin. They do not scream that THIS vial will be dead on Thursday.", img:"phone.png", d:7000},
+  {t:"That’s the product. We count remaining doses. We never overwrite the last bottle.", img:"phone.png", d:6000},
+  {t:"Before Thursday’s pin, if the fridge will be empty, we scream.", img:"phone.png", d:5500},
+  {t:"$10 a month vs one $200 bottle. One save pays for 20 months.", img:"phone.png", d:5500},
+  {t:"If we miss a scream in 30 days, you don’t pay that month. Click below.", img:"phone.png", d:6000}
+], 32000);
+
+document.querySelectorAll("form.waitlist").forEach(function(f){
+  f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button");b.textContent="You're in";b.disabled=true;});
 });
+(function(){
+  var end=new Date("2026-09-01T19:00:00+05:00").getTime();
+  function tick(){
+    var s=Math.max(0,end-Date.now())/1000;
+    var d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60);
+    var el=document.getElementById("cd");
+    if(el) el.textContent=d+"d "+h+"h "+m+"m";
+  }
+  tick(); setInterval(tick,30000);
+})();
 </script>
 </body></html>
