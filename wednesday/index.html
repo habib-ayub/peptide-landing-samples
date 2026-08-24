@@ -124,7 +124,7 @@ footer{text-align:center;color:#8a847a;font-size:12px;padding:28px 16px 80px}
 </div>
 
     <div class="offer">
-      <div>Total stack value vs one dead bottle</div>
+      <div>The leftover picture vs guessing all week</div>
       <div class="price">$10<span style="font-size:18px">/mo</span></div>
       <div>vs guessing on a $300 weekly drug</div>
     </div>
@@ -155,9 +155,14 @@ function bindWaitlists(){
   document.querySelectorAll("form.wait").forEach(function(f){
     f.addEventListener("submit",function(e){
       e.preventDefault();
+      var input=f.querySelector("input[type=email]");
+      var email=input?input.value.trim():"";
+      var key=location.pathname.indexOf("wednesday")>=0?"wednesdayEmail":"screamEmail";
+      try{ if(email) localStorage.setItem(key,email); }catch(err){}
       var b=f.querySelector("button");
       b.textContent="YOU'RE IN";
       b.disabled=true;
+      location.href="./thanks/";
     });
   });
 }
