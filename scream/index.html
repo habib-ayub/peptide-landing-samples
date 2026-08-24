@@ -4,71 +4,59 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Last Dose — never miss pin night</title>
+<meta name="description" content="Get warned before Thursday’s shot that this vial will be empty. For people who inject from vials, not pens."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-  :root { --bg:#0a0a0a; --ink:#fafaf9; --mut:#a8a29e; --go:#ff6a1a; --card:#141414; --line:#262626; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--ink); font-family:"Plus Jakarta Sans",system-ui,sans-serif; }
-  nav { display:flex; justify-content:space-between; align-items:center; max-width:1120px; margin:0 auto; padding:20px 24px; }
-  .logo { font-weight:800; letter-spacing:-.04em; font-size:18px; }
-  .nav-cta { background:var(--go); color:#111; text-decoration:none; font-weight:700; font-size:14px; padding:10px 16px; border-radius:999px; }
-  .hero { max-width:1120px; margin:0 auto; padding:24px 24px 72px; display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
-  .who { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--go); margin-bottom:16px; }
-  h1 { font-family:"Instrument Serif",serif; font-size:clamp(42px,5.4vw,68px); line-height:.95; font-weight:400; margin-bottom:18px; }
-  .sub { font-size:18px; line-height:1.5; color:var(--mut); max-width:36em; margin-bottom:28px; }
-  .cta { display:inline-block; background:var(--go); color:#111; text-decoration:none; font-weight:800; font-size:16px; padding:16px 22px; border-radius:999px; }
-  .tiny { display:block; margin-top:10px; color:var(--mut); font-size:13px; }
-  .phone { width:290px; margin:0 auto; background:#111; border:10px solid #2a2a2a; border-radius:42px; padding:18px 14px 28px; box-shadow:0 40px 80px rgba(255,106,26,.12); }
-  .notch { width:90px; height:18px; background:#000; border-radius:12px; margin:0 auto 18px; }
-  .app h3 { font-size:13px; color:var(--mut); font-weight:600; }
-  .app .big { font-family:"Instrument Serif",serif; font-size:64px; line-height:1; margin:8px 0; color:var(--go); }
-  .app .warn { background:#3a1608; color:#ffb089; padding:12px 14px; border-radius:14px; font-size:14px; font-weight:600; margin-top:18px; }
-  .pill { display:inline-block; background:#1f1f1f; border-radius:999px; padding:4px 10px; font-size:11px; color:var(--mut); margin-bottom:8px; }
-  .bar { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .bar-in { max-width:1120px; margin:0 auto; padding:18px 24px; display:flex; gap:28px; flex-wrap:wrap; color:var(--mut); font-size:14px; }
-  .bar-in b { color:var(--ink); }
-  .sec { max-width:1120px; margin:0 auto; padding:72px 24px; }
-  h2 { font-family:"Instrument Serif",serif; font-size:40px; font-weight:400; margin-bottom:28px; }
-  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; }
-  .card h3 { font-size:16px; margin-bottom:8px; }
-  .card p { color:var(--mut); font-size:14px; line-height:1.5; }
-  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-  .n { color:var(--go); font-weight:800; font-size:13px; margin-bottom:8px; }
-  .pricebox { background:var(--card); border:1px solid var(--line); border-radius:24px; padding:36px; max-width:520px; }
-  .pricebox .amt { font-size:52px; font-weight:800; letter-spacing:-.04em; }
-  .pricebox .amt span { font-size:18px; color:var(--mut); font-weight:600; }
-  .foot { padding:40px 24px 64px; color:#57534e; font-size:12px; max-width:1120px; margin:0 auto; }
-  @media (max-width:860px) {
-    .hero, .cards, .steps { grid-template-columns:1fr; }
-    .phone { margin-top:12px; }
-  }
+:root{--bg:#070707;--ink:#fafaf9;--mut:#a8a29e;--go:#ff6a1a;--card:#141414;--line:#262626}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,sans-serif}
+nav{max-width:1120px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:-.04em}
+.hero{max-width:1120px;margin:0 auto;padding:12px 24px 64px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.who{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--go);margin-bottom:14px}
+h1{font-family:"Instrument Serif",serif;font-size:clamp(40px,5.5vw,68px);line-height:.96;font-weight:400;margin-bottom:16px}
+.sub{font-size:18px;line-height:1.5;color:var(--mut);margin-bottom:24px;max-width:34em}
+form.waitlist{display:flex;gap:8px;flex-wrap:wrap}
+input[type=email]{flex:1;min-width:200px;background:#111;border:1px solid #333;color:#fff;padding:16px 14px;border-radius:999px;font:inherit}
+button{background:var(--go);color:#111;border:0;font-weight:800;font-size:15px;padding:16px 22px;border-radius:999px;cursor:pointer}
+.tiny{display:block;margin-top:10px;color:var(--mut);font-size:13px}
+.phone{width:min(100%,360px);margin:0 auto;display:block}
+.bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;gap:28px;flex-wrap:wrap;color:var(--mut);font-size:14px}
+.bar-in b{color:var(--ink)}
+.sec{max-width:1120px;margin:0 auto;padding:72px 24px}
+h2{font-family:"Instrument Serif",serif;font-size:40px;font-weight:400;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{margin-bottom:8px;font-size:16px}
+.card p{color:var(--mut);font-size:14px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.n{color:var(--go);font-weight:800;font-size:12px;margin-bottom:8px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;max-width:560px}
+.amt{font-size:52px;font-weight:800;letter-spacing:-.04em}
+.amt span{font-size:18px;color:var(--mut);font-weight:600}
+.faq{max-width:640px}
+.faq h3{font-size:16px;margin:18px 0 6px}
+.faq p{color:var(--mut);font-size:15px}
+footer{max-width:1120px;margin:0 auto;padding:24px 24px 64px;color:#57534e;font-size:12px}
+@media(max-width:860px){.hero,.cards,.steps{grid-template-columns:1fr}h1{font-size:42px}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="logo">Last Dose</div>
-  <a class="nav-cta" href="#get">Get the scream</a>
-</nav>
+<nav><div class="logo">Last Dose</div><a href="#get" style="color:var(--go);font-weight:700;text-decoration:none">Get early access</a></nav>
 <section class="hero">
   <div>
     <p class="who">For people who inject from vials, not pens</p>
-    <h1>Pin night.<br>Empty fridge.<br>$200 gone.</h1>
+    <h1>Pin night. Empty fridge. $200 gone.</h1>
     <p class="sub">Get a warning before Thursday’s shot that this vial will be dead. Reorder while you still have a dose. Not after you stall a week.</p>
-    <a class="cta" href="#get">Warn me before the vial dies</a>
-    <span class="tiny">$10/month. One missed bottle pays for 20 months.</span>
+    <form class="waitlist" id="get">
+      <input type="email" required placeholder="Email for early access" autocomplete="email"/>
+      <button type="submit">Warn me before it dies</button>
+    </form>
+    <span class="tiny">$10/month when we launch. One missed bottle pays for 20 months. Cancel anytime.</span>
   </div>
-  <div class="phone">
-    <div class="notch"></div>
-    <div class="app">
-      <span class="pill">Tirzepatide · 10mg vial</span>
-      <h3>This vial dies in</h3>
-      <div class="big">2 days</div>
-      <p style="color:#a8a29e;font-size:13px">Thursday pin · 0 doses left after that</p>
-      <div class="warn">Scream: reorder now. Fridge will be empty on pin night.</div>
-    </div>
-  </div>
+  <img class="phone" src="phone.png" alt="Last Dose app showing this vial dies in 2 days"/>
 </section>
 <div class="bar"><div class="bar-in">
   <span><b>$200</b> last bottle</span>
@@ -79,27 +67,50 @@
 <section class="sec">
   <h2>If this is you.</h2>
   <div class="cards">
-    <div class="card"><h3>You paid for the drug.</h3><p>Then you paid for the bottle. Then pin night you open the fridge and there’s nothing. Next delivery is four days out.</p></div>
+    <div class="card"><h3>You paid for the drug.</h3><p>Then you paid for the bottle. Pin night you open the fridge and there’s nothing. Next delivery is four days out.</p></div>
     <div class="card"><h3>The log didn’t scream.</h3><p>Free trackers remember the last pin. They do not tell you this vial is about to die. Spreadsheets work. You don’t open them.</p></div>
-    <div class="card"><h3>Wegovy pens skip this.</h3><p>This page is not for pens. If you click a pen, leave. If you draw from a vial, stay.</p></div>
+    <div class="card"><h3>Wegovy pens skip this.</h3><p>If you click a pen, this page is not for you. If you draw from a vial, stay.</p></div>
   </div>
 </section>
 <section class="sec">
   <h2>How it works</h2>
   <div class="steps">
-    <div><div class="n">01</div><h3>Log the pin</h3><p style="color:var(--mut);margin-top:8px">Units you drew. Free. Mix math stays free so the count is true.</p></div>
-    <div><div class="n">02</div><h3>We count the bottle</h3><p style="color:var(--mut);margin-top:8px">History never overwrites the last vial. That’s how the scream stays honest.</p></div>
-    <div><div class="n">03</div><h3>We scream</h3><p style="color:var(--mut);margin-top:8px">Before Thursday’s pin, if the bottle will be dead, you know.</p></div>
+    <div><div class="n">01</div><h3>Log the pin</h3><p class="card" style="border:0;background:transparent;padding:0;margin-top:8px">Units you drew. Mix math stays free so the count is true.</p></div>
+    <div><div class="n">02</div><h3>We count the bottle</h3><p class="card" style="border:0;background:transparent;padding:0;margin-top:8px">History never overwrites the last vial. That’s how the scream stays honest.</p></div>
+    <div><div class="n">03</div><h3>We scream</h3><p class="card" style="border:0;background:transparent;padding:0;margin-top:8px">Before Thursday’s pin, if the bottle will be dead, you know.</p></div>
   </div>
 </section>
-<section class="sec" id="get">
-  <div class="pricebox">
+<section class="sec">
+  <div class="price">
     <p class="who">The offer</p>
     <div class="amt">$10 <span>/ month</span></div>
-    <p style="color:var(--mut);margin:12px 0 22px">Vs one dead $200 bottle. If we miss a runout in 30 days, you don’t pay that month. Cancel anytime. Not medical advice.</p>
-    <a class="cta" href="#get">Warn me before the vial dies</a>
+    <p style="color:var(--mut);margin:12px 0 22px">Vs one dead $200 bottle. If we miss a runout in the first 30 days, you don’t pay that month.</p>
+    <form class="waitlist">
+      <input type="email" required placeholder="Email for early access"/>
+      <button type="submit">Warn me before it dies</button>
+    </form>
   </div>
 </section>
-<footer class="foot">Last Dose is a concept page, not a live product. You already bought the compound. We don’t tell you what to inject. We don’t let the fridge go empty.</footer>
-</body>
-</html>
+<section class="sec faq">
+  <h2>Objections</h2>
+  <h3>“I can do this in a spreadsheet.”</h3><p>You can. You don’t. The scream is for the night you forget. That’s the night that costs $200.</p>
+  <h3>“Peptide Tracker already logs for free.”</h3><p>Yes. Logging is the door. You pay so pin night is never empty.</p>
+  <h3>“Is this medical advice?”</h3><p>No. You already bought the compound. We don’t tell you what to inject. We don’t let the fridge go empty.</p>
+</section>
+<footer>Last Dose. Not medical advice. A/B test page.</footer>
+
+<script>
+document.querySelectorAll("form.waitlist").forEach(function(f){
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var btn = f.querySelector("button");
+    var email = f.querySelector("input[type=email]").value;
+    if(!email) return;
+    btn.textContent = "You're on the list";
+    btn.disabled = true;
+    f.querySelector("input").disabled = true;
+  });
+});
+</script>
+
+</body></html>
