@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sample B — Wednesday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root { --bg:#f6f3ee; --ink:#1c1916; --line:#d9d1c5; --blue:#2457d6; --dim:#6b645b; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:Outfit,sans-serif; }
+  .wrap { max-width:740px; margin:0 auto; padding:32px 22px 80px; }
+  .tag { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:600; margin-bottom:26px; }
+  h1 { font-family:"Cormorant Garamond",serif; font-weight:700; font-size:clamp(40px,8vw,64px); line-height:1.02; margin:0 0 18px; }
+  .lede { font-size:18px; line-height:1.5; color:var(--dim); max-width:32em; margin-bottom:28px; }
+  .cta { display:inline-block; background:var(--ink); color:#fff; text-decoration:none; font-weight:600; font-size:16px; padding:14px 22px; border-radius:999px; }
+  .chart { margin:36px 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 18px 10px; }
+  .chart svg { width:100%; height:auto; display:block; }
+  .caption { font-size:12px; color:var(--dim); margin-top:8px; }
+  hr { border:0; border-top:1px solid var(--line); margin:40px 0; }
+  h2 { font-size:20px; margin-bottom:10px; }
+  p, li { color:var(--dim); font-size:15px; line-height:1.6; }
+  ul { padding-left:1.2em; margin-top:8px; }
+  .fake { margin-top:40px; font-size:12px; color:#8a8378; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="tag">Sample B · Wednesday · not a live product</div>
+    <h1>You shot on Monday. Why does Wednesday feel like this?</h1>
+    <p class="lede">Hunger, nausea, “did the shot fail.” You want a reason. This page sells the weekly weather report: how much medicine is still in you as the days go on.</p>
+    <a class="cta" href="#waitlist">Show me my week</a>
+    <div class="chart" aria-hidden="true">
+      <svg viewBox="0 0 320 120">
+        <text x="8" y="14" font-size="11" fill="#6b645b" font-family="Outfit,sans-serif">estimated medicine in you</text>
+        <path d="M10,24 C70,24 90,28 130,52 C170,78 210,96 310,108" fill="none" stroke="#2457d6" stroke-width="3"/>
+        <circle cx="130" cy="52" r="5" fill="#2457d6"/>
+        <text x="138" y="48" font-size="11" fill="#1c1916" font-family="Outfit,sans-serif">Wed</text>
+      </svg>
+      <p class="caption">Not a blood test. A picture from when you shot and how fast that drug fades. Same job Shotsy charges for.</p>
+    </div>
+    <hr/>
+    <h2>Why people already pay</h2>
+    <p>Shotsy’s own site: track “dose levels” so you can understand the week. App Store people pay because it “estimates the amount of medication in the body as the week goes on.” Founder said the paying feature is that chart, not the log. 4.8 from about 30k ratings. About $10/month or $40–60/year.</p>
+    <ul>
+      <li>One job: stop guessing why today feels different.</li>
+      <li>Log is the door. The picture is why you pay.</li>
+      <li>This sample does not add peptides onto that graph. That was a fake improve.</li>
+    </ul>
+    <p class="fake">Sample landing page. Not medical advice. Built after reading shotsyapp.com, meagain.com, and pepaiapp.com. Shotsy sells “what actually matters.” MeAgain sells the whole GLP-1 routine (food, Capy). Pep AI already says vials count down so you reorder before you run out — that’s closer to Sample A.</p>
+  </div>
+</body>
+</html>
