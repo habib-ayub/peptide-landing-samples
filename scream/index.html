@@ -3,44 +3,103 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sample A — Empty fridge</title>
+<title>Never open an empty fridge on pin night</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-  :root { --bg:#0c0b09; --ink:#f4efe4; --warn:#e85d04; --dim:#9a917f; }
+  :root { --bg:#070707; --card:#121212; --ink:#f5f5f4; --mut:#a8a29e; --go:#f97316; --line:#1f1f1f; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--ink); font-family:"IBM Plex Mono",monospace; }
-  .wrap { max-width:720px; margin:0 auto; padding:28px 22px 80px; }
-  .tag { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--warn); margin-bottom:28px; }
-  h1 { font-family:Syne,sans-serif; font-weight:800; font-size:clamp(40px,9vw,72px); line-height:.95; letter-spacing:-.04em; margin:0 0 22px; }
-  .lede { font-size:16px; line-height:1.55; color:var(--dim); max-width:34em; margin-bottom:32px; }
-  .lede b { color:var(--ink); font-weight:500; }
-  .cta { display:inline-block; background:var(--warn); color:#fff; text-decoration:none; font-family:Syne,sans-serif; font-weight:700; font-size:18px; padding:16px 22px; border-radius:4px; }
-  .cta:hover { filter:brightness(1.08); }
-  .note { margin-top:14px; font-size:12px; color:var(--dim); }
-  hr { border:0; border-top:1px solid #2a261f; margin:48px 0; }
-  h2 { font-family:Syne,sans-serif; font-size:22px; margin-bottom:12px; }
-  p, li { color:var(--dim); font-size:14px; line-height:1.6; }
-  ul { padding-left:1.2em; margin:10px 0 0; }
-  .fake { margin-top:40px; font-size:11px; color:#5c5648; }
+  body { background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; }
+  .w { max-width:760px; margin:0 auto; padding:40px 22px 96px; }
+  .who { font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--go); margin-bottom:18px; }
+  h1 { font-size:clamp(34px,7vw,56px); line-height:1.02; font-weight:800; letter-spacing:-.035em; margin-bottom:16px; }
+  .sub { font-size:20px; line-height:1.45; color:var(--mut); margin-bottom:28px; }
+  .cta { display:block; width:100%; text-align:center; background:var(--go); color:#111; text-decoration:none; font-weight:800; font-size:18px; padding:18px 16px; border-radius:10px; }
+  .tiny { text-align:center; color:var(--mut); font-size:13px; margin-top:10px; }
+  h2 { font-size:28px; font-weight:800; letter-spacing:-.03em; margin:56px 0 16px; }
+  p, li { font-size:17px; line-height:1.55; color:#d6d3d1; }
+  ul { padding-left:1.15em; }
+  li { margin:8px 0; }
+  .stack { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:8px 0; margin:22px 0; }
+  .row { display:flex; justify-content:space-between; gap:16px; padding:14px 18px; border-bottom:1px solid var(--line); }
+  .row:last-child { border-bottom:0; }
+  .row span { color:var(--mut); white-space:nowrap; }
+  .price { display:flex; gap:24px; align-items:baseline; margin:28px 0 18px; }
+  .price b { font-size:42px; font-weight:800; }
+  .price s { color:var(--mut); font-size:22px; }
+  .obj { margin:12px 0 22px; }
+  .obj h3 { font-size:16px; margin-bottom:6px; }
+  .obj p { color:var(--mut); font-size:15px; }
+  footer { margin-top:64px; color:#57534e; font-size:12px; }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="tag">Sample A · empty fridge · not a live product</div>
-    <h1>Pin night.<br/>The fridge is empty.</h1>
-    <p class="lede">You paid <b>$200 for that bottle</b>. Thursday’s shot is in two days. Nothing is left. The free log remembered the last pin. It did not scream that this vial was about to die.</p>
-    <a class="cta" href="#waitlist">Warn me before I’m empty</a>
-    <p class="note">$10/month. Mix math stays free, so the count is honest.</p>
-    <hr/>
-    <h2>Why someone would pay</h2>
-    <p>Missing one week of a $150–$350 drug is the stall people panic about. $10 is cheaper than one dead week. Forum people already track remaining volume in spreadsheets because apps overwrite the vial and forget the last order.</p>
-    <ul>
-      <li>One scream: this bottle dies before Thursday’s pin.</li>
-      <li>History that never overwrites the last bottle.</li>
-      <li>Not a leftover-medicine picture. Not a food log. Not a coach.</li>
-    </ul>
-    <p class="fake">Sample landing page. Not medical advice. Built to compare against Shotsy’s “why do I feel like this” page.</p>
+<div class="w">
+  <p class="who">For people who inject from vials, not pens</p>
+  <h1>Never open the fridge on pin night to a dead $200 bottle.</h1>
+  <p class="sub">Get a warning before Thursday’s shot that this vial will be empty. So you reorder while you still have a dose left, not after you stall a week.</p>
+  <a class="cta" href="#get">Warn me before the vial dies</a>
+  <p class="tiny">$10/month. Cancel anytime. Mix math stays free so the count is honest.</p>
+
+  <h2>If this is you, keep reading.</h2>
+  <ul>
+    <li>You paid $150–$350 for the drug this month.</li>
+    <li>You paid another $200 for the last bottle.</li>
+    <li>It’s pin night. You open the fridge.</li>
+    <li>Nothing. Next delivery is four days out.</li>
+    <li>You miss a week. The scale stalls. You swear you’ll track it next time. You don’t.</li>
+  </ul>
+  <p style="margin-top:16px">A spreadsheet would have caught it. You didn’t open the spreadsheet. That’s the product.</p>
+
+  <h2>What you get</h2>
+  <div class="stack">
+    <div class="row">One scream: “this bottle dies before Thursday’s pin.” <span>$200</span></div>
+    <div class="row">A vial history that never overwrites the last bottle. <span>$50</span></div>
+    <div class="row">Free mix math, so the remaining-dose count is true. <span>$20</span></div>
+    <div class="row">Pin log (the door). Not the product. <span>Free</span></div>
   </div>
+  <p>That’s a $270 problem. You pay $10. One saved vial pays for two years.</p>
+
+  <h2>What this is not</h2>
+  <ul>
+    <li>Not Shotsy’s “why do I feel like garbage on Wednesday” picture. Different job.</li>
+    <li>Not a food app. Not a coach. Not a doctor.</li>
+    <li>Not a leftover-medicine graph for BPC. Nobody pays for that.</li>
+  </ul>
+
+  <h2>How it works (2 minutes)</h2>
+  <ul>
+    <li>1. Log the pin. How many units you drew. Free.</li>
+    <li>2. We count what’s left in that bottle. We do not overwrite last time.</li>
+    <li>3. Before the next pin, if the bottle will be dead, we scream.</li>
+  </ul>
+
+  <h2>The math that should piss you off</h2>
+  <p>One missed week of a $300 shot is $75 thrown away, plus the stall. $10 is cheaper than being empty once. If we never scream, you cancel. If we scream once, it paid for itself.</p>
+
+  <div class="price">
+    <b>$10</b>
+    <s>$270</s>
+    <span>per month vs one dead bottle</span>
+  </div>
+  <a class="cta" href="#get">Warn me before the vial dies</a>
+  <p class="tiny">If we miss a runout in the first 30 days, you don’t pay that month. No medical advice. You already bought the drug. We just don’t let the fridge go empty.</p>
+
+  <h2>Objections</h2>
+  <div class="obj">
+    <h3>“I can do this in a spreadsheet.”</h3>
+    <p>You can. You don’t. The scream is for the night you forget. That’s the night that costs $200.</p>
+  </div>
+  <div class="obj">
+    <h3>“Peptide Tracker already logs for free.”</h3>
+    <p>Yes. Logging is the door. You don’t pay for a log. You pay so pin night is never empty.</p>
+  </div>
+  <div class="obj">
+    <h3>“Wegovy pens don’t have this problem.”</h3>
+    <p>Correct. This is for vial people. If you click a pen, this page is not for you.</p>
+  </div>
+
+  <footer>Concept page. Not a live product. Not medical advice. You supply your own compound.</footer>
+</div>
 </body>
 </html>
