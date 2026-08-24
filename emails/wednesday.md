@@ -30,16 +30,15 @@ Log when you shot and how many mg. We draw the fade. Not a blood test.
 
 Open it on Wednesday. Still high, or already gone. The week makes sense.
 
-People already pay Shotsy $10/mo for this leftover-shot picture. 4.8 from ~30k App Store ratings. GlucoPal: “See the medication that's still working in your body.” Glapp sells rise, peak, and fade. Same job.
+Shotsy’s own site: leftover chart is Shotsy+. 4.8 from 29,000+ ratings on their comparison page. They don’t print the dollar. GlucoPal: “See the medication that's still working in your body.” Glapp sells rise, peak, and fade. Same job.
 
 This waitlist is whether you want that picture from us.
 
 ## 4. Stack + guarantee
-Subject: $10 vs guessing on a $300 drug
+Subject: $10 vs guessing on a $150–$350 month
 Body:
 The leftover picture. Why today feels like this. — $120/yr
 Shot log + reminders (the door) — $0
-What people already pay Shotsy — $40–$120/yr
 
 Your price: $10/month.
 

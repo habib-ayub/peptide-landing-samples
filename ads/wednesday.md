@@ -7,11 +7,11 @@ Who: weekly GLP-1. Not food. Not empty-fridge. Not peptide leftover-graphs.
 
 2. Most trackers tell you when you dosed. This draws the fade. Not a blood test.
 
-3. GlucoPal already sells “see the medication that's still working in your body.” Shotsy 4.8/~30k pays for the leftover picture. Same job. $10/mo waitlist.
+3. GlucoPal already sells “see the medication that's still working in your body.” Shotsy leftover chart is Shotsy+ (their words). They don’t print the dollar on the site. Same job. Our waitlist is $10/mo.
 
 4. Log the shot and the mg. Open it Wednesday: still high, or already gone.
 
-5. $10/mo vs guessing on a $300 drug. Founder waitlist. Closes 1 Sep.
+5. $10/mo vs guessing on a $150–$350 month of the drug. Founder waitlist. Closes 1 Sep.
 
 ## Headlines
 1. Wednesday feels like the shot failed
