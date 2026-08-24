@@ -1,12 +1,12 @@
 # Still In — 5 emails
-From: Habib. One list. When it ships, they hear.
+From: Habib. One list. When it ships, they hear. No video.
 
 ## 1. Confirm
 Subject: You’re on the list. Wednesday gets a picture.
 Body:
 You’re in.
 
-You take a weekly shot. Log the shot and the mg. We draw the fade. Open it Wednesday: still high, or already gone.
+Log the shot and the mg. We draw the fade. Open it Wednesday: still high, or already gone.
 
 $10/month when it ships. Founder price closes 1 Sep.
 
@@ -21,6 +21,8 @@ Wednesday you feel like garbage. You don’t know if the medicine is gone. You g
 
 You’re not buying milligrams. You’re buying a reason for Wednesday.
 
+GlucoPal already named Wednesday the rough patch.
+
 ## 3. Mechanism
 Subject: Log the shot. We draw the fade.
 Body:
@@ -28,9 +30,9 @@ Log when you shot and how many mg. We draw the fade. Not a blood test.
 
 Open it on Wednesday. Still high, or already gone. The week makes sense.
 
-People already pay Shotsy $10/mo for this leftover-shot picture. 4.8 from ~30k App Store ratings. Glapp sells rise, peak, and fade. Same job.
+People already pay Shotsy $10/mo for this leftover-shot picture. 4.8 from ~30k App Store ratings. GlucoPal: “See the medication that's still working in your body.” Glapp sells rise, peak, and fade. Same job.
 
-This page is whether you want that picture from us.
+This waitlist is whether you want that picture from us.
 
 ## 4. Stack + guarantee
 Subject: $10 vs guessing on a $300 drug
@@ -49,7 +51,5 @@ Body:
 Waitlist closes 1 Sep 2026, 7pm Pakistan time.
 
 After that you are not early.
-
-Watch the video. Hit YES if you want the picture.
 
 https://habib-ayub.github.io/peptide-landing-samples/wednesday/
