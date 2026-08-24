@@ -3,91 +3,142 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Still In — why Wednesday feels like this</title>
+<title>Still In — know why Wednesday feels like the shot failed</title>
 <meta name="description" content="See how much of Monday’s GLP-1 shot is still in you by Wednesday."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#f7f4ee;color:#14110e;font-family:"Plus Jakarta Sans",system-ui,sans-serif}
-.hero{min-height:100vh;background:#f7f4ee url("hero.png") right center/cover no-repeat;position:relative;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f4ee 0%,#f7f4eef2 48%,#f7f4ee66 100%)}
-.hero-in{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:88px 24px 64px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:center;width:100%}
-nav{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;padding:20px 24px}
+body{background:#f7f4ee;color:#14110e;font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.5}
+.hero{min-height:100svh;background:#f7f4ee url("hero.png") right center/cover no-repeat;position:relative;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f4ee 0 50%,#f7f4ee55 100%)}
+nav{position:absolute;z-index:2;top:0;left:0;right:0;max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:800;letter-spacing:-.04em}
-.who{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1d4ed8;margin-bottom:14px}
-h1{font-family:"Instrument Serif",serif;font-size:clamp(38px,5.2vw,64px);line-height:.98;font-weight:400;margin-bottom:16px}
-.sub{font-size:18px;line-height:1.5;color:#57534e;margin-bottom:26px;max-width:34em}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:96px 24px 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;width:100%}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#1d4ed8;margin-bottom:12px}
+h1{font-family:"Instrument Serif",serif;font-size:clamp(36px,5.2vw,62px);line-height:.98;font-weight:400;margin:0 0 14px}
+.sub{font-size:18px;color:#44403c;max-width:34em;margin-bottom:22px}
 form{display:flex;gap:8px;flex-wrap:wrap}
-input{flex:1;min-width:210px;background:#fff;border:1px solid #e8e2d6;color:#14110e;padding:16px 16px;border-radius:999px;font:inherit}
-button,.btn{background:#1d4ed8;color:#fff;border:0;font-weight:800;font-size:15px;padding:16px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
-.tiny{display:block;margin-top:10px;color:#6b645b;font-size:13px}
-.phone{width:100%;max-width:340px;filter:drop-shadow(0 24px 40px rgba(20,17,14,.18))}
-.bar{background:#fff;border-top:1px solid #e8e2d6;border-bottom:1px solid #e8e2d6}
-.bar-in{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;gap:28px;flex-wrap:wrap;color:#6b645b;font-size:14px}
-.bar-in b{color:#14110e}
-.sec{max-width:1120px;margin:0 auto;padding:80px 24px}
-h2{font-family:"Instrument Serif",serif;font-size:42px;font-weight:400;margin-bottom:24px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:#fff;border:1px solid #e8e2d6;border-radius:18px;padding:22px}
-.card p,.steps p,.faq p{color:#6b645b;font-size:15px;line-height:1.55}
-.card h3{margin-bottom:8px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.n{color:#1d4ed8;font-weight:800;font-size:12px;margin-bottom:8px}
-.price{background:#fff;border:1px solid #e8e2d6;border-radius:24px;padding:36px;max-width:560px}
-.amt{font-size:52px;font-weight:800}
-.amt span{font-size:18px;color:#6b645b}
-.faq h3{margin:18px 0 6px;font-size:16px}
-footer{max-width:1120px;margin:0 auto;padding:24px 24px 64px;color:#a8a29e;font-size:12px}
-@media(max-width:860px){.hero-in,.cards,.steps{grid-template-columns:1fr}.hero{min-height:auto}.hero:before{background:#f7f4eef5}}
+input{flex:1;min-width:200px;background:#fff;border:1px solid #e8e2d6;padding:16px 16px;border-radius:999px;font:inherit}
+button,.btn{background:#1d4ed8;color:#fff;border:0;font-weight:800;padding:16px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
+.proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:#57534e}
+.proof b{color:#14110e}
+.phone{width:min(100%,320px);margin:0 auto;filter:drop-shadow(0 24px 40px rgba(20,17,14,.2))}
+.badge{margin-top:12px;display:inline-block;background:#eef2ff;border:1px solid #1d4ed8;color:#1e3a8a;font-size:13px;font-weight:700;padding:8px 12px;border-radius:8px}
+.sec{max-width:800px;margin:0 auto;padding:64px 24px}
+h2{font-family:"Instrument Serif",serif;font-size:36px;font-weight:400;margin:0 0 16px}
+p,li{color:#44403c;font-size:17px}
+ul{padding-left:1.15em;margin:12px 0}
+li{margin:8px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:#fff;border:1px solid #e8e2d6;border-radius:16px;padding:20px}
+.stack{background:#fff;border:1px solid #e8e2d6;border-radius:16px;overflow:hidden;margin:20px 0}
+.row{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid #e8e2d6}
+.row:last-child{border-bottom:0;background:#eef2ff;font-weight:800}
+.total{display:flex;gap:18px;align-items:baseline;margin:18px 0}
+.total b{font-size:48px}
+.g{background:#eef2ff;border:1px solid #1d4ed8;border-radius:16px;padding:22px;margin:22px 0}
+.g h3{color:#1d4ed8;margin-bottom:8px}
+.cta-block{text-align:center}
+.tiny{font-size:13px;color:#57534e;margin-top:8px}
+footer{max-width:800px;margin:0 auto;padding:20px 24px 72px;color:#a8a29e;font-size:12px}
+@media(max-width:860px){.wrap,.split{grid-template-columns:1fr}.hero{min-height:auto}.hero:before{background:#f7f4eef5}}
 </style>
 </head>
 <body>
-<nav><div class="logo">Still In</div><a class="btn" href="#get">Get early access</a></nav>
+<nav><div class="logo">Still In</div><a class="btn" href="#get">See my week</a></nav>
 <section class="hero">
-  <div class="hero-in">
+  <div class="wrap">
     <div>
-      <p class="who">For people on a weekly GLP-1 shot</p>
-      <h1>You shot Monday. Why does Wednesday feel like this?</h1>
-      <p class="sub">See how much of Monday’s shot is still in you. Hunger, nausea, “did it fail.” Get a reason. Not a blood test. A picture.</p>
+      <p class="kicker">Weekly GLP-1 shots only</p>
+      <h1>Know why Wednesday feels like the shot failed.</h1>
+      <p class="sub">See how much of Monday’s shot is still in you. Hunger, nausea, “did it fail” get a reason. Not a blood test. A picture.</p>
       <form class="waitlist" id="get">
-        <input type="email" required placeholder="Email for early access" autocomplete="email"/>
-        <button type="submit">Show me my week</button>
+        <input type="email" required placeholder="Email" autocomplete="email"/>
+        <button type="submit">Show me why today feels like this</button>
       </form>
-      <span class="tiny">$10/month when we launch. Same job people already pay Shotsy for.</span>
+      <div class="proof"><span><b>4.8 / 30k</b> already pay for this picture</span><span><b>$10/mo</b></span><span>No 7-day trial</span></div>
+      <div class="badge">If the picture doesn’t change how you read Wednesday, cancel. Keep the log.</div>
     </div>
-    <img class="phone" src="phone.png" alt="Still In app showing estimated medicine still in you on Wednesday"/>
+    <img class="phone" src="phone.png" alt="Chart of medicine still in you, Wednesday marked"/>
   </div>
 </section>
-<div class="bar"><div class="bar-in"><span><b>4.8 / 30k</b> already pay for this picture</span><span><b>$10/mo</b> vs guessing all week</span><span><b>Not</b> a food app</span></div></div>
-<section class="sec"><h2>You’re not buying milligrams.</h2>
-<div class="cards">
-<div class="card"><h3>Monday you feel locked in.</h3><p>Wednesday you’re starving or wrecked. You think the shot failed.</p></div>
-<div class="card"><h3>You want a reason.</h3><p>“Estimates the amount of medication in the body as the week goes on. Well worth the subscription.”</p></div>
-<div class="card"><h3>The log is free. The picture is not.</h3><p>Shotsy’s founder said the paying feature is the chart. This page sells that job.</p></div>
-</div></section>
-<section class="sec"><h2>How it works</h2>
-<div class="steps">
-<div><div class="n">01</div><h3>Log the shot</h3><p>When, and how many mg.</p></div>
-<div><div class="n">02</div><h3>We draw the fade</h3><p>Published half-life. Not a lab.</p></div>
-<div><div class="n">03</div><h3>Wednesday makes sense</h3><p>Open it. See still in you, or already gone.</p></div>
-</div></section>
-<section class="sec"><div class="price">
-<p class="who">The offer</p>
-<div class="amt">$10 <span>/ month</span></div>
-<p style="color:#6b645b;margin:12px 0 22px">You already spend $150–$350 on the drug. $10 makes the other six days make sense.</p>
-<form class="waitlist"><input type="email" required placeholder="Email for early access"/><button type="submit">Show me my week</button></form>
-</div></section>
-<section class="sec faq">
-<h2>Objections</h2>
-<h3>“Shotsy already does this.”</h3><p>Yes. That’s why this page exists. You’re looking at the offer, not the app yet.</p>
-<h3>“I can feel when it wears off.”</h3><p>Then you wouldn’t pay. The people who pay can’t tell hunger from the fade.</p>
-<h3>“Is this medical advice?”</h3><p>No. We don’t change your dose.</p>
+
+<section class="sec">
+  <h2>This is for you if…</h2>
+  <div class="split">
+    <div class="box">
+      <h3>Yes</h3>
+      <ul>
+        <li>You take a weekly shot (sema, tirz, compounded, whatever).</li>
+        <li>Wednesday you feel like garbage and you don’t know if the medicine is gone.</li>
+        <li>You would pay $10 to stop guessing.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>No</h3>
+      <ul>
+        <li>You can already feel the fade and don’t care about a chart.</li>
+        <li>You want food tracking. That’s MeAgain.</li>
+        <li>You want peptides drawn on the same leftover graph. That does not fix Wednesday.</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<footer>Still In. Not medical advice. A/B test page.</footer>
+
+<section class="sec">
+  <h2>The dream outcome</h2>
+  <p>You shot Monday. You felt locked in. Wednesday you’re starving or wrecked. Instead of “did it fail,” you open the app and see: still high, or already gone. The week makes sense. You don’t double. You don’t spiral.</p>
+</section>
+
+<section class="sec">
+  <h2>Proof people already pay for this</h2>
+  <p>Shotsy’s homepage: “The GLP-1 tracker for what actually matters.” App Store: “estimates the amount of medication in the body as the week goes on… well worth the subscription.” Founder: the paying feature is that chart, not the log. 4.8 from ~30k ratings. ~$10/month or $40–60/year. Glapp sells “rise, peak and fade.” GlucoPal sells “how much medication is in your system right now.” The job is real. This page is that job, said plainly.</p>
+</section>
+
+<section class="sec">
+  <h2>The stack</h2>
+  <div class="stack">
+    <div class="row"><span>Core: leftover picture. Why today feels like this.</span><span>$120/yr</span></div>
+    <div class="row"><span>Bonus: shot log + reminders (the door)</span><span>$0</span></div>
+    <div class="row"><span>Not a food log. Not a 75-compound encyclopedia.</span><span>$0</span></div>
+    <div class="row"><span>What they already pay Shotsy</span><span>$40–$120/yr</span></div>
+  </div>
+  <div class="total"><b>$10</b><span>/ month vs guessing all week on a $300 drug</span></div>
+</section>
+
+<section class="sec">
+  <div class="g">
+    <h3>Guarantee</h3>
+    <p>Use the picture for 30 days. If it doesn’t change how you read Wednesday, cancel. You keep the free log. No 7-day trial. Weekly injectors get one shot in seven days. Month-to-month.</p>
+  </div>
+  <div class="cta-block">
+    <form class="waitlist" style="justify-content:center">
+      <input type="email" required placeholder="Email"/>
+      <button type="submit">Show me why today feels like this</button>
+    </form>
+    <p class="tiny">Waitlist. $10/month when it ships. Not medical advice. We don’t change your dose.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>FAQ</h2>
+  <p><b>Isn’t this Shotsy?</b><br/>Same job. This page exists so we can A/B the offer before we build. If we can’t beat Wednesday, we shouldn’t ship.</p>
+  <p style="margin-top:14px"><b>Is the leftover picture a blood test?</b><br/>No. You log when you shot and how many mg. We draw the fade from published half-life. A weather report, not a lab.</p>
+  <p style="margin-top:14px"><b>Do you have an app today?</b><br/>No. Email gets you in first.</p>
+</section>
+<footer>Still In. A/B test. Not a live product yet. Not medical advice.</footer>
+
 <script>
 document.querySelectorAll("form.waitlist").forEach(function(f){
-  f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button");b.textContent="You're on the list";b.disabled=true;f.querySelector("input").disabled=true;});
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var b=f.querySelector("button");
+    b.textContent="You're in";
+    b.disabled=true;
+    var i=f.querySelector("input");
+    if(i) i.disabled=true;
+  });
 });
 </script>
 </body></html>

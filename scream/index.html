@@ -3,92 +3,152 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Last Dose — never miss pin night</title>
-<meta name="description" content="Get warned before Thursday’s shot that this vial will be empty."/>
+<title>Last Dose — never miss pin night because the bottle died</title>
+<meta name="description" content="For vial injectors: get warned before Thursday’s shot that this $200 bottle will be empty."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#070707;color:#fafaf9;font-family:"Plus Jakarta Sans",system-ui,sans-serif}
-a{color:inherit}
-.hero{min-height:100vh;background:#070707 url("hero.png") right center/cover no-repeat;position:relative;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070707 0%,rgba(7,7,7,.88) 42%,rgba(7,7,7,.25) 100%)}
-.hero-in{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:88px 24px 64px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:center;width:100%}
-nav{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;padding:20px 24px}
+body{background:#070707;color:#fafaf9;font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.5}
+.hero{min-height:100svh;background:#070707 url("hero.png") right center/cover no-repeat;position:relative;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070707 0 46%,rgba(7,7,7,.2) 100%)}
+nav{position:absolute;z-index:2;top:0;left:0;right:0;max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:800;letter-spacing:-.04em}
-.who{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ff6a1a;margin-bottom:14px}
-h1{font-family:"Instrument Serif",serif;font-size:clamp(44px,6vw,72px);line-height:.95;font-weight:400;margin-bottom:16px}
-.sub{font-size:18px;line-height:1.5;color:#d6d3d1;margin-bottom:26px;max-width:34em}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:96px 24px 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;width:100%}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ff6a1a;margin-bottom:12px}
+h1{font-family:"Instrument Serif",serif;font-size:clamp(40px,5.6vw,68px);line-height:.96;font-weight:400;margin:0 0 14px}
+.sub{font-size:18px;color:#d6d3d1;max-width:34em;margin-bottom:22px}
 form{display:flex;gap:8px;flex-wrap:wrap}
-input{flex:1;min-width:210px;background:rgba(0,0,0,.55);border:1px solid #3f3f46;color:#fff;padding:16px 16px;border-radius:999px;font:inherit}
-button,.btn{background:#ff6a1a;color:#111;border:0;font-weight:800;font-size:15px;padding:16px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
-.tiny{display:block;margin-top:10px;color:#a8a29e;font-size:13px}
-.phone{width:100%;max-width:340px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
-.bar{background:#0c0c0c;border-top:1px solid #262626;border-bottom:1px solid #262626}
-.bar-in{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;gap:28px;flex-wrap:wrap;color:#a8a29e;font-size:14px}
-.bar-in b{color:#fff}
-.sec{max-width:1120px;margin:0 auto;padding:80px 24px}
-h2{font-family:"Instrument Serif",serif;font-size:42px;font-weight:400;margin-bottom:24px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:#141414;border:1px solid #262626;border-radius:18px;padding:22px}
-.card h3{margin-bottom:8px}
-.card p,.steps p,.faq p{color:#a8a29e;font-size:15px;line-height:1.55}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.n{color:#ff6a1a;font-weight:800;font-size:12px;margin-bottom:8px}
-.price{background:#141414;border:1px solid #262626;border-radius:24px;padding:36px;max-width:560px}
-.amt{font-size:52px;font-weight:800}
-.amt span{font-size:18px;color:#a8a29e}
-.faq h3{margin:18px 0 6px;font-size:16px}
-footer{max-width:1120px;margin:0 auto;padding:24px 24px 64px;color:#57534e;font-size:12px}
-@media(max-width:860px){.hero-in,.cards,.steps{grid-template-columns:1fr}.hero{min-height:auto;background-position:center top}.hero:before{background:linear-gradient(#070707e6,#070707f2)}}
+input{flex:1;min-width:200px;background:#111;border:1px solid #3f3f46;color:#fff;padding:16px 16px;border-radius:999px;font:inherit}
+button,.btn{background:#ff6a1a;color:#111;border:0;font-weight:800;padding:16px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
+.proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:#a8a29e}
+.proof b{color:#fff}
+.phone{width:min(100%,320px);margin:0 auto;filter:drop-shadow(0 28px 50px #000)}
+.badge{margin-top:12px;display:inline-block;background:#1a120c;border:1px solid #7c2d12;color:#fdba74;font-size:13px;font-weight:700;padding:8px 12px;border-radius:8px}
+.sec{max-width:800px;margin:0 auto;padding:64px 24px}
+h2{font-family:"Instrument Serif",serif;font-size:36px;font-weight:400;margin:0 0 16px}
+p,li{color:#d6d3d1;font-size:17px}
+ul{padding-left:1.15em;margin:12px 0}
+li{margin:8px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:#121212;border:1px solid #262626;border-radius:16px;padding:20px}
+.box h3{margin-bottom:8px}
+.stack{background:#121212;border:1px solid #262626;border-radius:16px;overflow:hidden;margin:20px 0}
+.row{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid #262626}
+.row:last-child{border-bottom:0;background:#1a120c;font-weight:800}
+.total{display:flex;gap:18px;align-items:baseline;margin:18px 0}
+.total b{font-size:48px}
+.total s{color:#a8a29e;font-size:22px}
+.g{background:#1a120c;border:1px solid #ff6a1a;border-radius:16px;padding:22px;margin:22px 0}
+.g h3{color:#ff6a1a;margin-bottom:8px}
+.cta-block{text-align:center;padding:12px 0 8px}
+.tiny{font-size:13px;color:#a8a29e;margin-top:8px}
+footer{max-width:800px;margin:0 auto;padding:20px 24px 72px;color:#57534e;font-size:12px}
+@media(max-width:860px){.wrap,.split{grid-template-columns:1fr}.hero{min-height:auto}.hero:before{background:#070707f0}}
 </style>
 </head>
 <body>
-<nav><div class="logo">Last Dose</div><a class="btn" href="#get">Get early access</a></nav>
+<nav><div class="logo">Last Dose</div><a class="btn" href="#get">Get the scream</a></nav>
 <section class="hero">
-  <div class="hero-in">
+  <div class="wrap">
     <div>
-      <p class="who">For people who inject from vials, not pens</p>
-      <h1>Pin night. Empty fridge. $200 gone.</h1>
-      <p class="sub">Get a warning before Thursday’s shot that this vial will be dead. Reorder while you still have a dose.</p>
+      <p class="kicker">Vial injectors only. Pens, leave.</p>
+      <h1>Never miss pin night because the bottle died.</h1>
+      <p class="sub">Get warned before Thursday’s shot that this $200 vial will be empty. Reorder while you still have a dose. Not after you stall a week.</p>
       <form class="waitlist" id="get">
-        <input type="email" required placeholder="Email for early access" autocomplete="email"/>
+        <input type="email" required placeholder="Email" autocomplete="email"/>
         <button type="submit">Warn me before it dies</button>
       </form>
-      <span class="tiny">$10/month when we launch. One missed bottle pays for 20 months.</span>
+      <div class="proof"><span><b>30-day</b> miss-a-scream = free month</span><span><b>$10</b> vs one $200 bottle</span><span>Not medical advice</span></div>
+      <div class="badge">If we don’t scream before you’re empty, you don’t pay that month.</div>
     </div>
-    <img class="phone" src="phone.png" alt="Last Dose app: this vial dies in 2 days"/>
+    <img class="phone" src="phone.png" alt="App: this vial dies in 2 days"/>
   </div>
 </section>
-<div class="bar"><div class="bar-in"><span><b>$200</b> last bottle</span><span><b>$10</b> to never miss it</span><span><b>Vial people</b> only</span><span><b>Not</b> a leftover-shot chart</span></div></div>
-<section class="sec"><h2>If this is you.</h2>
-<div class="cards">
-<div class="card"><h3>You paid for the drug.</h3><p>Then you paid for the bottle. Pin night you open the fridge and there’s nothing. Next delivery is four days out.</p></div>
-<div class="card"><h3>The log didn’t scream.</h3><p>Free trackers remember the last pin. They do not tell you this vial is about to die.</p></div>
-<div class="card"><h3>Wegovy pens skip this.</h3><p>If you click a pen, leave. If you draw from a vial, stay.</p></div>
-</div></section>
-<section class="sec"><h2>How it works</h2>
-<div class="steps">
-<div><div class="n">01</div><h3>Log the pin</h3><p>Units you drew. Mix math stays free so the count is true.</p></div>
-<div><div class="n">02</div><h3>We count the bottle</h3><p>History never overwrites the last vial.</p></div>
-<div><div class="n">03</div><h3>We scream</h3><p>Before Thursday’s pin, if the bottle will be dead, you know.</p></div>
-</div></section>
-<section class="sec"><div class="price">
-<p class="who">The offer</p>
-<div class="amt">$10 <span>/ month</span></div>
-<p style="color:#a8a29e;margin:12px 0 22px">Vs one dead $200 bottle. Miss a runout in 30 days and you don’t pay that month.</p>
-<form class="waitlist"><input type="email" required placeholder="Email for early access"/><button type="submit">Warn me before it dies</button></form>
-</div></section>
-<section class="sec faq">
-<h2>Objections</h2>
-<h3>“I can do this in a spreadsheet.”</h3><p>You can. You don’t. The scream is for the night you forget.</p>
-<h3>“Peptide Tracker already logs for free.”</h3><p>Logging is the door. You pay so pin night is never empty.</p>
-<h3>“Is this medical advice?”</h3><p>No. You already bought the compound. We don’t tell you what to inject.</p>
+
+<section class="sec">
+  <h2>This is for you if…</h2>
+  <div class="split">
+    <div class="box">
+      <h3>Yes</h3>
+      <ul>
+        <li>You draw from a vial, not a pen.</li>
+        <li>You have paid $150–$350 this month for the drug plus another $200 for a bottle.</li>
+        <li>You have opened the fridge on pin night and felt your stomach drop.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>No</h3>
+      <ul>
+        <li>You click a Wegovy / Zepbound pen. You don’t have this problem.</li>
+        <li>You want Shotsy’s “why does Wednesday feel like this” chart. Different job.</li>
+        <li>You want a doctor in an app. We will not tell you what to inject.</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<footer>Last Dose. Not medical advice. A/B test page.</footer>
+
+<section class="sec">
+  <h2>What happens if you do nothing</h2>
+  <p>You already know. You paid for the bottle. You meant to track remaining units. Pin night comes. The fridge is empty. Next delivery is four days out. You miss a week. The scale stalls. You swear you’ll use the spreadsheet next time. You don’t.</p>
+  <p style="margin-top:12px">A sane person would pay $10 to never feel that again. That’s the whole product.</p>
+</section>
+
+<section class="sec">
+  <h2>The mechanism (why this isn’t “just a log”)</h2>
+  <p>Free logs remember the last pin. They do not scream that <i>this vial</i> will be dead before Thursday. We count remaining doses. We never overwrite the last bottle. Mix math stays free so the count is true. Then we scream.</p>
+</section>
+
+<section class="sec">
+  <h2>What you get (the stack)</h2>
+  <div class="stack">
+    <div class="row"><span>Core: the scream. “This bottle dies before Thursday’s pin.”</span><span>$200</span></div>
+    <div class="row"><span>Bonus: vial history that never overwrites the last bottle</span><span>$49</span></div>
+    <div class="row"><span>Bonus: free mix math so the remaining-dose count is honest</span><span>$29</span></div>
+    <div class="row"><span>Bonus: pin log (the door). Not why you pay.</span><span>$0</span></div>
+    <div class="row"><span>Total value</span><span>$278</span></div>
+  </div>
+  <div class="total"><b>$10</b><s>$278</s><span>/ month vs one dead bottle</span></div>
+  <p>One saved vial pays for 20 months. If the scream never fires, cancel.</p>
+</section>
+
+<section class="sec">
+  <div class="g">
+    <h3>Guarantee</h3>
+    <p>Use it for 30 days. If we fail to warn you before a vial runs out, you don’t pay that month. Keep the log. Worst case: you wasted a minute and still have a spreadsheet.</p>
+  </div>
+  <div class="cta-block">
+    <form class="waitlist" style="justify-content:center">
+      <input type="email" required placeholder="Email"/>
+      <button type="submit">Warn me before it dies</button>
+    </form>
+    <p class="tiny">Founder waitlist. $10/month when it ships. Cancel anytime. Not medical advice.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Proof this panic is real (not fake reviews of us)</h2>
+  <p>GLP-1 Forum people already track remaining volume and landed cost in spreadsheets because apps overwrite the vial and forget the last order. Pep AI’s own site sells “every vial counts itself down, so you reorder before you run out.” Peptide Tracker does it free. The job exists. The paid layer is the scream, not the log.</p>
+</section>
+
+<section class="sec">
+  <h2>FAQ</h2>
+  <p><b>Isn’t this just Peptide Tracker?</b><br/>No. They log. We interrupt you before pin night is empty.</p>
+  <p style="margin-top:14px"><b>Do you ship today?</b><br/>No. This page is the offer. Email gets you in first. The app is next.</p>
+  <p style="margin-top:14px"><b>Medical advice?</b><br/>No. You already bought the compound. We don’t dose you. We don’t let the fridge go empty.</p>
+</section>
+<footer>Last Dose. A/B test. Not a live product yet. Not medical advice.</footer>
+
 <script>
 document.querySelectorAll("form.waitlist").forEach(function(f){
-  f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button");b.textContent="You're on the list";b.disabled=true;f.querySelector("input").disabled=true;});
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var b=f.querySelector("button");
+    b.textContent="You're in";
+    b.disabled=true;
+    var i=f.querySelector("input");
+    if(i) i.disabled=true;
+  });
 });
 </script>
 </body></html>
