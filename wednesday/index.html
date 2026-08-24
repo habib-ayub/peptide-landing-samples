@@ -5,151 +5,235 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Watch: why Wednesday feels like the shot failed</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-.page{background:#0b0b0b;color:#f5f5f4;font-family:"Plus Jakarta Sans",system-ui,sans-serif}
-.topbar{background:#111;color:#fbbf24;text-align:center;font-size:13px;font-weight:700;padding:10px 16px;letter-spacing:.02em}
-.funnel{max-width:920px;margin:0 auto;padding:28px 16px 80px;text-align:center}
-h1{font-family:"Instrument Serif",serif;font-size:clamp(28px,4.4vw,46px);line-height:1.12;font-weight:400;margin:12px 0 22px}
-.vsl{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
-.vsl img.slide,.vsl .solid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vsl .solid{background:#111}
-.vsl .cap{position:absolute;left:0;right:0;bottom:0;padding:28px 24px 36px;background:linear-gradient(transparent,#000e);text-align:left;font-size:clamp(18px,2.6vw,28px);font-weight:700;line-height:1.25}
-.vsl .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);cursor:pointer;border:0}
-.vsl .play i{width:86px;height:86px;border-radius:50%;background:#ef4444;display:grid;place-items:center;box-shadow:0 10px 30px #ef444488}
-.vsl .play i:after{content:"";border:16px solid transparent;border-left:26px solid #fff;margin-left:6px;display:block}
-.bar{position:absolute;left:0;right:0;bottom:0;height:5px;background:#ffffff22}
-.bar>span{display:block;height:100%;width:0;background:#ef4444}
-.cta-wrap{display:none;margin:22px 0 8px}
-.cta-wrap.on{display:block}
-.cta{display:inline-block;background:#ef4444;color:#fff;font-weight:800;font-size:18px;padding:18px 28px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;animation:pulse 1.6s ease-in-out infinite}
-@keyframes pulse{50%{transform:scale(1.04)}}
-.arrow{font-size:28px;margin-bottom:8px}
-.sub{color:#a8a29e;font-size:14px;margin-top:8px}
-.below{max-width:720px;margin:48px auto 0;text-align:left}
-h2{font-family:"Instrument Serif",serif;font-size:30px;font-weight:400;margin:36px 0 12px}
-p,li{color:#d6d3d1;font-size:16px;line-height:1.6}
-ul{padding-left:1.2em}
-.stack{background:#141414;border:1px solid #262626;border-radius:12px;overflow:hidden;margin:16px 0}
-.row{display:flex;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1px solid #262626}
-.row:last-child{border:0;background:#1c1010;font-weight:800}
-.g{border:2px solid #fbbf24;background:#1c1508;border-radius:12px;padding:18px;margin:18px 0}
-.g b{color:#fbbf24}
-form{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
-input{min-width:220px;flex:1;padding:16px;border-radius:8px;border:1px solid #3f3f46;background:#111;color:#fff;font:inherit}
-button.yes{background:#ef4444;color:#fff;font-weight:800;border:0;padding:16px 22px;border-radius:8px;cursor:pointer}
-.sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:#111;padding:10px 16px;border-top:1px solid #262626;z-index:20}
+:root{--red:#e10600;--red2:#b00000;--ink:#121212;--paper:#fffdf8;--mut:#5c574e;--hl:#ffe500;--line:#ebe6da}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;line-height:1.55}
+.bar{background:#111;color:#ffe500;text-align:center;font-size:13px;font-weight:700;padding:10px 16px}
+.ticks{display:flex;justify-content:center;gap:8px;background:#111;padding:12px 16px 18px}
+.tick{background:#1d1d1d;border:1px solid #333;border-radius:6px;min-width:70px;padding:8px 6px;color:#fff;text-align:center}
+.tick b{display:block;font-size:22px;letter-spacing:.04em}
+.tick small{color:#ffe500;font-size:10px;font-weight:800;letter-spacing:.12em}
+.wrap{max-width:820px;margin:0 auto;padding:28px 18px 96px;text-align:center}
+.kicker{color:var(--red);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px}
+h1{font-size:clamp(28px,4.6vw,44px);line-height:1.12;margin:0 0 10px;font-weight:800;letter-spacing:-.02em}
+.hl{background:var(--hl);padding:0 .12em;box-decoration-break:clone}
+.sub{color:var(--mut);font-size:16px;margin:0 0 22px}
+.player{position:relative;width:100%;aspect-ratio:16/9;background:#000;border:3px solid #111;border-radius:6px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.player video,.player img.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.player .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 18px 32px;background:linear-gradient(transparent,#000d);color:#fff;font-size:clamp(16px,2.4vw,26px);font-weight:800;text-align:left;line-height:1.25;pointer-events:none}
+.play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(0,0,0,.38);border:0;cursor:pointer;color:#fff;font:inherit;font-weight:800}
+.play i{width:92px;height:92px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 12px 40px #e1060080}
+.play i:after{content:"";border:18px solid transparent;border-left:30px solid #fff;margin-left:8px;display:block}
+.prog{position:absolute;left:0;right:0;bottom:0;height:6px;background:#ffffff22}
+.prog>span{display:block;height:100%;width:0;background:var(--red)}
+.cta-box{display:none;margin:22px auto 0;max-width:560px}
+.cta-box.on{display:block}
+.bounce{font-size:32px;animation:bob 1s ease-in-out infinite;margin:0}
+@keyframes bob{50%{transform:translateY(8px)}}
+.yes{display:block;width:100%;background:linear-gradient(#ff2a2a,#c40000);color:#fff;font-weight:800;font-size:20px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:20px 18px;border:0;border-radius:8px;cursor:pointer;box-shadow:0 7px 0 #7a0000,0 14px 28px rgba(0,0,0,.22)}
+.yes:hover{transform:translateY(2px);box-shadow:0 5px 0 #7a0000,0 10px 20px rgba(0,0,0,.22)}
+.fine{color:var(--mut);font-size:13px;margin:10px 0 0}
+.proof{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin:28px 0 8px;color:#3f3a34;font-size:13px;font-weight:700}
+.proof span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.left{text-align:left;max-width:680px;margin:40px auto 0}
+h2{font-size:26px;margin:36px 0 12px;line-height:1.2}
+p,li{font-size:16px;color:#2b2722}
+.x{color:#9a3412;font-weight:700}
+.ok{color:#166534;font-weight:700}
+.quotes{display:grid;gap:12px;margin:16px 0}
+.q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-align:left}
+.q p{margin:0 0 8px;font-style:italic}
+.q small{color:var(--mut);font-weight:700}
+.stack{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:16px 0}
+.row{display:flex;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);text-align:left}
+.row:last-child{border:0;background:#fff8d6;font-weight:800}
+.row s{color:#9a3412}
+.offer{background:#111;color:#fff;border-radius:14px;padding:22px 18px;margin:22px 0;text-align:center}
+.offer .price{font-size:42px;font-weight:800;margin:6px 0}
+.offer .was{color:#fca5a5;text-decoration:line-through}
+.gwrap{display:flex;gap:16px;align-items:center;background:#fff;border:2px solid #c9a227;border-radius:14px;padding:16px;margin:18px 0}
+.seal{flex:0 0 92px;width:92px;height:92px;border-radius:50%;border:6px double #c9a227;background:radial-gradient(#fff,#f6e7a8);display:grid;place-items:center;font-size:11px;font-weight:800;text-align:center;line-height:1.15;color:#7a5b00}
+.gwrap p{margin:0;font-size:15px}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:8px 0;text-align:left}
+summary{cursor:pointer;font-weight:700}
+form.wait{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+input[type=email]{flex:1;min-width:220px;padding:16px;border:1px solid #ccc;border-radius:8px;font:inherit}
+.phone{width:min(280px,70%);margin:18px auto;display:block;border-radius:28px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:#111;padding:10px 14px;z-index:30}
 .sticky.on{display:block}
-.sticky a{display:block;background:#ef4444;color:#fff;text-align:center;font-weight:800;padding:14px;border-radius:8px;text-decoration:none}
-footer{text-align:center;color:#57534e;font-size:12px;margin-top:48px}
+.sticky a{display:block;background:var(--red);color:#fff;text-align:center;font-weight:800;padding:14px;border-radius:8px;text-decoration:none;text-transform:uppercase}
+footer{text-align:center;color:#8a847a;font-size:12px;padding:28px 16px 80px}
+@media(max-width:640px){h1{font-size:28px}.yes{font-size:16px}}
 </style>
 </head>
-<body class="page">
-<div class="topbar">Founder price $10/mo — waitlist closes <span id="cd">soon</span></div>
-<div class="funnel">
-  <p style="color:#fbbf24;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase">2-minute video · weekly GLP-1 shots</p>
-  <h1>Watch this if Wednesday feels like the shot failed.</h1>
-  <div class="vsl" id="vsl">
-    <img class="slide" src="hero.png" alt=""/>
+<body>
+<div class="bar">FOUNDER PRICE $10/MO — WAITLIST CLOSES IN</div>
+<div class="ticks">
+  <div class="tick"><b id="dd">00</b><small>DAYS</small></div>
+  <div class="tick"><b id="hh">00</b><small>HRS</small></div>
+  <div class="tick"><b id="mm">00</b><small>MIN</small></div>
+  <div class="tick"><b id="ss">00</b><small>SEC</small></div>
+</div>
+<div class="wrap">
+  <p class="kicker">2-minute video · weekly GLP-1 shots</p>
+  <h1>Watch this if Wednesday feels like <span class="hl">the shot failed</span>.</h1>
+  <p class="sub">Hit play. Same leftover-shot picture people already pay Shotsy $10/mo for.</p>
+  <div class="player" id="player">
+    <video poster="hero.png" playsinline preload="metadata">
+      <source src="vsl.mp4" type="video/mp4"/>
+    </video>
+    <img class="slide" src="hero.png" alt="" style="display:none"/>
     <div class="cap">Click play. 2 minutes.</div>
-    <button class="play" type="button" aria-label="Play video"><i></i></button>
-    <div class="bar"><span></span></div>
+    <button class="play" type="button" aria-label="Play video"><i></i> WATCH THE VIDEO</button>
+    <div class="prog"><span></span></div>
   </div>
-  <div class="cta-wrap">
-    <div class="arrow">▼</div>
-    <a class="cta" href="#get">YES — I want in</a>
-    <p class="sub">Watch until the offer. The button shows when the pitch starts.</p>
+  <div class="cta-box">
+    <p class="bounce">▼ ▼ ▼</p>
+    <a class="yes" href="#get">YES — I WANT IN</a>
+    <p class="fine">The button shows when the offer hits. Same button as below.</p>
   </div>
-</div>
-<div class="below">
-
-<h2>Who this is for</h2>
-<p>You take a weekly GLP-1 shot. Wednesday you feel like garbage and you don’t know if the medicine is gone. You would pay $10 to stop guessing.</p>
-<p>If you can already feel the fade and don’t care, leave. If you want food tracking, that’s MeAgain. If you want peptides on the same leftover graph, that does not fix Wednesday.</p>
-<h2>Proof this already sells</h2>
-<p>Shotsy: “The GLP-1 tracker for what actually matters.” App Store people pay because it “estimates the amount of medication in the body as the week goes on.” 4.8 / ~30k. Glapp sells rise, peak and fade. Same job.</p>
-<h2>What you get</h2>
-
-<section id="get">
-  <h2>Get on the list</h2>
   
-<div class="stack">
-  <div class="row"><span>The leftover picture. Why today feels like this.</span><span>$120/yr</span></div>
-  <div class="row"><span>Shot log + reminders (the door)</span><span>$0</span></div>
-  <div class="row"><span>What people already pay Shotsy</span><span>$40–$120/yr</span></div>
+<div class="proof">
+  <span>Shotsy 4.8 / ~30k</span>
+  <span>Same leftover-shot job</span>
+  <span>$10/mo</span>
 </div>
-<p>Your price: <b>$10/month</b>.</p>
+<div class="left">
+  <h2>Who this is for</h2>
+  <p class="ok">You take a weekly GLP-1 shot. Wednesday you feel like garbage and you don’t know if the medicine is gone. You would pay $10 to stop guessing.</p>
+  <p class="x">If you can already feel the fade and don’t care, leave. If you want food tracking, that’s MeAgain. If you want peptides on the same leftover graph, that does not fix Wednesday.</p>
+  <img class="phone" src="phone.png" alt="Phone showing leftover-shot fade"/>
+  <h2>This already sells</h2>
+  <p>Shotsy: “The GLP-1 tracker for what actually matters.” App Store reviewers pay because it “estimates the amount of medication in the body as the week goes on.” 4.8 from about 30,000 ratings. Glapp sells rise, peak, and fade. Same job. Not a blood test.</p>
+  <h2>What people already pay for (not our users)</h2>
+  <div class="quotes">
+    <div class="q"><p>“It estimates the amount of medication in the body as the week goes on.”</p><small>Shotsy App Store · competitor proof, not our rating</small></div>
+    <div class="q"><p>Monday you felt locked in. Wednesday you feel like the shot failed. The picture is the product.</p><small>Offer logic · not a testimonial</small></div>
+  </div>
+</div>
 
-  <div class="g"><b>Guarantee:</b> If we miss a runout in the first 30 days, you don’t pay that month. Cancel anytime. Not medical advice.</div>
-  <form class="waitlist">
-    <input type="email" required placeholder="Email"/>
-    <button class="yes" type="submit">YES — I want in</button>
-  </form>
-  <p class="sub" style="text-align:center">$10/month when it ships. You’re early. That’s the deal.</p>
-</section>
+  <div class="left" id="get">
+    <h2>What you get</h2>
+    
+<div class="stack">
+  <div class="row"><span>The leftover picture. Why today feels like this.</span><s>$120/yr</s></div>
+  <div class="row"><span>Shot log + reminders (the door)</span><span>$0</span></div>
+  <div class="row"><span>What people already pay Shotsy</span><s>$40–$120/yr</s></div>
 </div>
-<div class="sticky"><a href="#get">YES — I want in</a></div>
-<footer>A/B test funnel. Not a live app yet. Not medical advice.</footer>
+
+    <div class="offer">
+      <div>Total stack value vs one dead bottle</div>
+      <div class="price">$10<span style="font-size:18px">/mo</span></div>
+      <div>vs guessing on a $300 weekly drug</div>
+    </div>
+    <div class="gwrap">
+      <div class="seal">30-DAY<br/>GUARANTEE</div>
+      <p><b>If it doesn’t change Wednesday, cancel.</b> 30 days. Not a blood test. Not medical advice.</p>
+    </div>
+    <h2>Get on the founder list</h2>
+    <form class="wait">
+      <input type="email" required placeholder="Email"/>
+      <button class="yes" type="submit" style="width:auto;padding:16px 22px">YES — I WANT IN</button>
+    </form>
+    <p class="fine">$10/month when it ships. You’re early. That’s the deal. Cancel anytime.</p>
+    <h2>Questions</h2>
+    <details><summary>Is this a blood test?</summary><p>No. Log the shot and the mg. We draw a fade picture. Same job people already pay Shotsy for.</p></details>
+<details><summary>Is this Shotsy?</summary><p>No. Not affiliated. This page tests whether you want that leftover-shot picture from us.</p></details>
+<details><summary>I also run peptide bottles.</summary><p>That does not fix Wednesday. Don’t tape two pains. The other page is the empty-fridge scream.</p></details>
+<details><summary>Is the app live?</summary><p>Not yet. Founder waitlist. $10/month when it ships.</p></details>
+<details><summary>Guarantee?</summary><p>If it doesn’t change Wednesday in 30 days, cancel. You don’t pay to keep guessing.</p></details>
+    <p style="margin-top:28px"><b>P.S.</b> You’re not buying milligrams. You’re buying a reason for Wednesday. That’s the whole product. Get on the list.</p>
+  </div>
+</div>
+<div class="sticky"><a href="#get">YES — I WANT IN</a></div>
+<footer>A/B test funnel. Not a live app yet. Not medical advice. Not affiliated with Shotsy or any clinic.</footer>
 <script>
 
-function mountVSL(root, slides, revealAt){
-  var i=0, t=0, playing=false, timer=null;
-  var total = slides.reduce(function(s,x){return s+x.d;},0);
-  var playBtn = root.querySelector('.play');
-  var cap = root.querySelector('.cap');
-  var bar = root.querySelector('.bar>span');
-  var img = root.querySelector('img.slide');
-  var cta = document.querySelector('.cta-wrap');
-  var sticky = document.querySelector('.sticky');
-  function show(n){
-    var s=slides[n];
-    cap.textContent=s.t;
-    if(s.img){ img.src=s.img; img.style.display='block'; }
-    else { img.style.display='none'; }
-  }
-  function tick(){
-    t+=200;
-    var acc=0, idx=0;
-    for(var k=0;k<slides.length;k++){ acc+=slides[k].d; if(t<acc){idx=k;break;} idx=k; }
-    if(idx!==i){ i=idx; show(i); }
-    bar.style.width=Math.min(100, t/total*100)+'%';
-    if(t>=revealAt && cta){ cta.classList.add('on'); if(sticky) sticky.classList.add('on'); }
-    if(t>=total){ playing=false; clearInterval(timer); if(cta) cta.classList.add('on'); }
-  }
-  playBtn.addEventListener('click', function(){
-    if(playing) return;
-    playing=true;
-    playBtn.style.display='none';
-    show(0);
-    timer=setInterval(tick,200);
+function bindWaitlists(){
+  document.querySelectorAll("form.wait").forEach(function(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var b=f.querySelector("button");
+      b.textContent="YOU'RE IN";
+      b.disabled=true;
+    });
   });
 }
+function countdown(){
+  var end=new Date("2026-09-01T19:00:00+05:00").getTime();
+  function tick(){
+    var s=Math.max(0,end-Date.now())/1000;
+    var d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60), sec=Math.floor(s%60);
+    var set=function(id,v){var el=document.getElementById(id); if(el) el.textContent=String(v).padStart(2,"0");};
+    set("dd",d); set("hh",h); set("mm",m); set("ss",sec);
+  }
+  tick(); setInterval(tick,1000);
+}
+function reveal(){
+  document.querySelectorAll(".cta-box").forEach(function(el){el.classList.add("on");});
+  var st=document.querySelector(".sticky"); if(st) st.classList.add("on");
+}
+function mountVideoOrSlides(slides, revealAtMs){
+  var root=document.getElementById("player");
+  var video=root.querySelector("video");
+  var play=root.querySelector(".play");
+  var cap=root.querySelector(".cap");
+  var bar=root.querySelector(".prog>span");
+  var img=root.querySelector("img.slide");
+  var usingVideo=false;
+  function useSlides(){
+    usingVideo=false;
+    if(video){ video.removeAttribute("src"); video.load(); video.style.display="none"; }
+    img.style.display="block";
+    var i=0,t=0,playing=false,timer=null;
+    var total=slides.reduce(function(s,x){return s+x.d;},0);
+    function show(n){ cap.textContent=slides[n].t; img.src=slides[n].img; }
+    play.addEventListener("click", function(){
+      if(playing) return;
+      playing=true; play.style.display="none"; show(0);
+      timer=setInterval(function(){
+        t+=200;
+        var acc=0, idx=0;
+        for(var k=0;k<slides.length;k++){ acc+=slides[k].d; if(t<acc){idx=k;break;} idx=k; }
+        if(idx!==i){ i=idx; show(i); }
+        bar.style.width=Math.min(100,t/total*100)+"%";
+        if(t>=revealAtMs) reveal();
+        if(t>=total){ clearInterval(timer); reveal(); }
+      },200);
+    });
+  }
+  if(video){
+    video.addEventListener("timeupdate", function(){
+      if(video.duration && video.currentTime/video.duration>=0.62) reveal();
+      bar.style.width=(video.duration? (video.currentTime/video.duration*100):0)+"%";
+    });
+    video.addEventListener("ended", reveal);
+    video.addEventListener("error", useSlides);
+    play.addEventListener("click", function(){
+      play.style.display="none";
+      video.play().then(function(){ usingVideo=true; }).catch(useSlides);
+    });
+    fetch("vsl.mp4",{method:"HEAD"}).then(function(r){
+      if(!r.ok) useSlides();
+    }).catch(useSlides);
+  } else { useSlides(); }
+}
+bindWaitlists(); countdown();
 
 
-mountVSL(document.getElementById('vsl'), [
+mountVideoOrSlides([
   {t:"You shot Monday. You felt locked in.", img:"hero.png", d:5000},
   {t:"Wednesday you feel like garbage. You think the shot failed.", img:"hero.png", d:5500},
   {t:"You’re not buying milligrams. You’re buying a reason for Wednesday.", img:"phone.png", d:5500},
-  {t:"Shotsy’s paying feature is this picture: how much is still in you as the week goes on.", img:"phone.png", d:6500},
-  {t:"4.8 from 30k ratings. People already pay $10 a month for it.", img:"phone.png", d:5500},
+  {t:"Shotsy’s paying feature is this picture: how much is still in you.", img:"phone.png", d:6500},
+  {t:"4.8 from ~30k ratings. People already pay $10 a month for it.", img:"phone.png", d:5500},
   {t:"Log when you shot and how many mg. We draw the fade. Not a blood test.", img:"phone.png", d:6000},
   {t:"Open it on Wednesday. Still high, or already gone. The week makes sense.", img:"phone.png", d:6000},
   {t:"$10 a month vs guessing on a $300 drug. If it doesn’t change Wednesday, cancel.", img:"phone.png", d:6000},
   {t:"Click below if you want the picture. That’s the whole offer.", img:"phone.png", d:5000}
 ], 30000);
 
-document.querySelectorAll("form.waitlist").forEach(function(f){
-  f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button");b.textContent="You're in";b.disabled=true;});
-});
-(function(){
-  var end=new Date("2026-09-01T19:00:00+05:00").getTime();
-  function tick(){
-    var s=Math.max(0,end-Date.now())/1000;
-    var d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60);
-    var el=document.getElementById("cd");
-    if(el) el.textContent=d+"d "+h+"h "+m+"m";
-  }
-  tick(); setInterval(tick,30000);
-})();
 </script>
 </body></html>
